@@ -1,0 +1,34 @@
+[project]
+name = "paint-by-number"
+version = "0.1.0"
+authors = [
+  { name="Ana Calatayud", email="ana.calatayud@outlook.com" },
+]
+description = "Generate a paint-by-number version of a picture."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "pillow",
+    "streamlit"
+]
+
+license = "GPL-3.0-or-later"
+license-files = ["COPYING"]
+
+[project.urls]
+Homepage = "https://github.com/anacltd/paint-by-number"
+Issues = "https://github.com/anacltd/paint-by-number/issues"
+
+[tool.ruff.lint]
+ignore = ["E501", "E402"]
+select = ["B","C","E","F","W","B9", "I", "Q"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
